@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths.Co</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #ffffff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .btn {
+            background-color: #fdfbfb;
+            color: rgb(15, 15, 15);
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .hero {
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .start {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .herobanner {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+
+        .sectitle {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0 15px 0;
+            text-transform: lowercase;
+        }
+
+        .coursesgrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .coursecardimg {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #eee;
+        }
+
+        .yearrow {
+            display: flex;
+            height: 100px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .yearimgbox {
+            width: 35%;
+            height: 100%;
+        }
+
+        .yearimgbox img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .yearcontent {
+            width: 65%;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .y9content { background-color: #bae6fd; }
+        .y10content { background-color: #fbcfe8; }
+
+        .yeartitle {
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .yearlink {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .progresscontainer {
+            background: linear-gradient(135deg, #ff8a00, #e52e71, #0070f3, #00dfd8);
+            padding: 20px;
+            border-radius: 6px;
+            color: #000;
+            margin-bottom: 25px;
+        }
+
+        .progressmaintitle {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .progressrow {
+            margin-bottom: 12px;
+        }
+
+        .progresslabel {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .progressbar {
+            width: 100%;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 60px;
+        }
+        .progress {
+            width: 100%;
+            height: 14px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 60px;
+
+
+        }
+
+        .commentssection h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .commentssection p {
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Maths.Co</div>
+        <class="btn">Admin</class>
+    </header>
+
+    <section class="hero">
+        <p>The newest and greatest platform for learning maths.</p>
+        <img class="herobanner" src="images/maths.png" alt="Math">
+    </section>
+
+    <h2 class="sectitle">courses</h2>
+    <section class="coursesgrid">
+        <a href="information1y9.html" title="Data"><img class="coursecardimg" src="images/yr9.png" alt="Year 9 Maths"></a>
+        <a href="information1y10.html" title="Data"><img class="coursecardimg" src="images/yr10.png" alt="Grade 10 Math"></a>
+        <img class="coursecardimg" src="images/yr11.png" alt="Under Construction">
+    </section>
+
+    <div class="yearrow">
+        <div class="yearimgbox">
+            <a href="information1y9.html" title="Data"><img src="images/yr9banner.png" alt="yr9banner"></a>
+        </div>
+        <div class="yearcontent y9content">
+            <div class="yeartitle">Year 9</div>
+            <div class="yearlink" onclick="progresstransport()">Get started &rarr;</div>
+        </div>
+    </div>
+
+
+    <div class="yearrow">
+        <div class="yearimgbox">
+            <a href="information1y10.html" title="Data"><img src="images/yr10banner.png" alt="yr10banner"></a>
+        </div>
+        <div class="yearcontent y10content">
+            <div class="yeartitle">Year 10</div>
+            <a href="information1y10.html" class="yearlink">Get started &rarr;</a>
+        </div>
+    </div>
+
+    <section class="progresscontainer">
+        <div class="progressmaintitle">Progress</div>
+        
+        <div class="progressrow">
+            <div class="progresslabel">Year 10 :</div>
+            <progress class="progress" id="Progressbar2" max= "100"></progress>
+        </div>
+        <div class="progressrow">
+            <div class="progresslabel">Year 9 :</div>
+            <progress class="progress" id="Progressbar" max= "100"></progress>
+        </div>
+    </section>
+    <script>
+        let yr9progress = parseInt(localStorage.getItem("Progress9"));
+        const Progressbar9 = document.getElementById("Progressbar");
+        Progressbar9.value = yr9progress*25;
+        let yr10progress = parseInt(localStorage.getItem("Progress10"));
+        const Progressbar10 = document.getElementById("Progressbar2");
+        Progressbar10.value = yr10progress*100;
+
+        function progresstransport() {
+            if (yr9progress == 0) {
+                window.location.href = "information1y9.html";
+            }
+            else if (yr9progress == 1) {
+                window.location.href = "information2y9.html";
+            }
+            else if (yr9progress == 2) {
+                window.location.href = "information3y9.html";
+            }  
+            else if (yr9progress == 3) {
+                window.location.href = "information4y9.html";
+            }             
+        }
+    </script>
+
+
+    <section class="commentssection">
+        <h3>Comments</h3>
+        <p>Currently empty</p>
+    </section>
+
+</body>
+</html>
